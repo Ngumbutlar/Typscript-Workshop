@@ -1,0 +1,24 @@
+{
+  "name": "typscript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Ngumbutlar/Typescript-workshop.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Ngumbutlar/Typescript-workshop/issues"
+  },
+  "homepage": "https://github.com/Ngumbutlar/Typescript-workshop#readme",
+  "description": "",
+  "dependencies": {
+    "@types/lodash": "^4.14.197",
+    "lodash": "^4.17.21"
+  }
+}
