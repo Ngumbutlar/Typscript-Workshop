@@ -30,6 +30,6 @@ export const capitalize = ( sentence: string): string => {
     return `${sentence.charAt(0).toUpperCase()}${sentence.slice(1).toLowerCase()}`;
 };
 
-console.log(sentence('the cat', 'ate', 'apples', 'cheese', 'pancake'));
-console.log(sentence('the cat', 'ate', 'slept', 'all day'));
-console.log(sentence('the cat', 'ate', 'sneezed'));
+// console.log(sentence('the cat', 'ate', 'apples', 'cheese', 'pancake'));
+// console.log(sentence('the cat', 'ate', 'slept', 'all day'));
+// console.log(sentence('the cat', 'ate', 'sneezed'));
