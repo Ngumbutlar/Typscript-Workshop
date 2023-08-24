@@ -3,7 +3,7 @@ import { getDestinations } from "./flight";
 
 const destinations = getDestinations();
 
-let bamendaBooking = startBooking(destinations[0], 21);
+let bamendaBooking = startBooking(destinations[0], 1);
 bamendaBooking = processPayment(bamendaBooking);
 bamendaBooking = completeBooking(bamendaBooking);
 

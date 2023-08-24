@@ -42,7 +42,7 @@ export const processPayment = (booking: Booking): Booking => {
 export const completeBooking = (booking: Booking): Booking => {
     reserveSeats(booking.flight, booking.seatsHeld);
     booking.seatsReserved = booking.seatsHeld;
-    booking.seatsHeld = 0;
+    booking.seatsHeld == 0;
     return booking;
 };
 

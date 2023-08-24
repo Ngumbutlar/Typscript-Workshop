@@ -7,11 +7,20 @@ export interface Flight {
     time: string;
 }
 
-const flights: Flight[] = [
+export interface Booking {
+    bookingNumber: number;
+    flight: Flight;
+    paid: boolean;
+    seatsHeld: number;
+    seatsReserved: number;
+
+}
+
+const flight: Flight[] = [
     {
         destination: 'Bamenda',
         flightNumber: 1,
-        seatsHeld: 10,
+        seatsHeld: 0,
         seatsRemaining: 20,
         time: '10:15'
     },
@@ -19,7 +28,7 @@ const flights: Flight[] = [
     {
         destination: 'Los Angelas',
         flightNumber: 2,
-        seatsHeld: 5,
+        seatsHeld: 0,
         seatsRemaining: 60,
         time: '15:30'
     },
@@ -57,32 +66,32 @@ const flights: Flight[] = [
     }
 ];
 
-export const getDestination = (flights: Flight) => {
-    return flights
-}
+export const getDestinations = (): Flight[] => flight;
 
-export const checkAvailability = (flights: Flight, seatsRequested: number): boolean => {
-    if ((flights.seatsRemaining - flights.seatsHeld) >= seatsRequested) {
+
+export const checkAvailability = (flight: Flight, seatsRequested: number): boolean => {
+    if ((flight.seatsRemaining - flight.seatsHeld) >= seatsRequested) {
         return true;
     }
     return false;
 };
 
-export const holdSeats = (flights: Flight, seatsRequested: number): Flight => {
-    if ((flights.seatsRemaining - flights.seatsHeld) < seatsRequested) {
+export const holdSeats = (flight: Flight, seatsRequested: number): Flight => {
+    if (flight.seatsRemaining - flight.seatsHeld < seatsRequested) {
         throw console.error('No Seats held at the moment');
     }
-    flights.seatsHeld += seatsRequested;
-    return flights;
+    flight.seatsHeld += seatsRequested;
+    flight.seatsRemaining -= seatsRequested;
+    return flight;
 }
 
-export const reservedSeats = (flights: Flight, seatsRequested: number): Flight => {
-    if (flights.seatsHeld < seatsRequested) {
+export const reserveSeats = (flight: Flight, seatsRequested: number): Flight => {
+    if (flight.seatsHeld < seatsRequested) {
         throw console.error('There was an error while reserving seat');
     }
-    flights.seatsHeld -= seatsRequested;
-    flights.seatsRemaining -= seatsRequested;
-    return flights;
+    flight.seatsHeld -= seatsRequested;
+    flight.seatsRemaining -= seatsRequested;
+    return flight;
 }
 
 

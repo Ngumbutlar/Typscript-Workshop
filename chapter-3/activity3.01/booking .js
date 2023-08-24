@@ -26,7 +26,7 @@ exports.processPayment = processPayment;
 const completeBooking = (booking) => {
     (0, flight_1.reserveSeats)(booking.flight, booking.seatsHeld);
     booking.seatsReserved = booking.seatsHeld;
-    booking.seatsHeld = 0;
+    booking.seatsHeld == 0;
     return booking;
 };
 exports.completeBooking = completeBooking;
