@@ -1,7 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.completeBooking = exports.processPayment = exports.startBooking = void 0;
 const flight_1 = require("./flight");
 const bookingFactory = (bookingNumber) => (flight, seatsheld) => ({
