@@ -10,9 +10,9 @@ class Team3 {
     }
 }
 const astroPlayers = ["Altuve", "Bregman", "Correa", "Springer"];
-const astro = new Team3("Astros", astroPlayers);
-console.log(astro.generateLineUp());
-console.log(astro.name);
+const astros3 = new Team3("Astros", astroPlayers);
+console.log(astros3.generateLineUp());
+console.log(astros3.name);
 const blueJaysPlayer = ["Vlad", "Smoak", "Teller", "Sogard"];
 const blueJays = new Team3("Blue Jays", blueJaysPlayer);
 console.log(blueJays.generateLineUp());

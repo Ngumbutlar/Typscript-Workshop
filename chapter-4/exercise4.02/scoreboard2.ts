@@ -10,9 +10,9 @@ class Team2 {
     }
 }
 
-const astro = new Team2("Astros");
-// console.log(astro.generateLineup());
-console.log(astro.name);
+const astros2 = new Team2("Astros");
+// console.log(astros2.generateLineup());
+console.log(astros2.name);
 const bluJays = new Team2("BlueJays");
 // console.log(bluJays.generateLineup())
 console.log(bluJays.name)
