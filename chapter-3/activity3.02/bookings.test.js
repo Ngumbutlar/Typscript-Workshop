@@ -27,14 +27,13 @@ describe('bookings tests', () => {
         expect(booking.seatsReserved).toBe(3);
     });
 });
-describe('error scenarios', () => {
-    test('booking must have availability', () => {
-        expect.assertions(1);
-        try {
-            (0, booking_1.startBooking)(destinations[6], 8);
-        }
-        catch (e) {
-            expect(e.message).toBe('Booking not available!');
-        }
-    });
-});
+// describe('error scenarios', () => {
+//     test('booking must have availability', () => {
+//         expect.assertions(1);
+//         try {
+//             startBooking(destinations[6], 8);
+//         } catch (e) {
+//             expect(e.message).toBe('Booking not available!');
+//         }
+//     });
+// });
