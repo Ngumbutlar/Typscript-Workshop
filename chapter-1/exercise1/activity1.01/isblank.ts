@@ -17,4 +17,4 @@ function isBlank(str:string): boolean{
 
 console.log(isBlank("War and Peace"));
 console.log(isBlank("       "));
-console.log(isBlank(""));
+console.log(isBlank("")); 
