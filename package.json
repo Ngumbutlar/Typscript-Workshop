@@ -19,7 +19,8 @@
   "description": "",
   "dependencies": {
     "@types/lodash": "^4.14.197",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",

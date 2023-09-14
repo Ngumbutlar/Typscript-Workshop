@@ -1,5 +1,5 @@
 "use strict";
-// simple class decorator factory
+//simple class decorator factory
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9,21 +9,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-let Teacher = class Teacher {
+let Teacher_ = class Teacher_ {
     constructor(id, name) {
         this.id = id;
         this.name = name;
     }
 };
-Teacher = __decorate([
+Teacher_ = __decorate([
     Token(true),
     __metadata("design:paramtypes", [Number, String])
-], Teacher);
-function Token(constructor) {
+], Teacher_);
+function Token1(constructor) {
     constructor.prototype.token = true;
 }
-const teacher = new Teacher(1, " John Smith");
-console.log("Does the teacher have a token?", teacher['token']);
+const teacher_ = new Teacher_(1, " John Smith");
+// console.log("Does the teacher have a token?", teacher['token']);
 let Student = class Student {
     constructor(id, name) {
         this.id = id;
@@ -31,13 +31,13 @@ let Student = class Student {
     }
 };
 Student = __decorate([
-    Token(false),
+    Token2(false),
     __metadata("design:paramtypes", [Number, String])
 ], Student);
-function Token(hasToken) {
+function Token2(hasToken) {
     return function (constructor) {
         constructor.prototype.token = hasToken;
     };
 }
 const student = new Student(101, "John Bender");
-console.log("Does the teacher have a token?", student['token']);
+// console.log("Does the teacher have a token?", student['token']);

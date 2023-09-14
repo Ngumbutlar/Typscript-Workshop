@@ -1,27 +1,27 @@
-// simple class decorator factory
+//simple class decorator factory
 
 @Token(true)
-class Teacher {
+class Teacher_ {
     constructor (public id: number, public name: string) {}
     //teacher specific code 
 }
 
-function Token (constructor: Function){
+function Token1 (constructor: Function){
     constructor.prototype.token = true;
 }
 
-const teacher = new Teacher(1, " John Smith");
-console.log("Does the teacher have a token?", teacher['token']);
+const teacher_ = new Teacher_(1, " John Smith");
+// console.log("Does the teacher have a token?", teacher['token']);
 
-@Token(false)
+@Token2(false)
 class Student {
     constructor (public id: number, public name: string) {}
 }
 
-function Token(hasToken: boolean){
-    return function (constructor: Function) {
+function Token2(hasToken: boolean){
+    return function (constructor: Function){
         constructor.prototype.token = hasToken;
     }
 }
 const student = new Student(101, "John Bender");
-console.log("Does the teacher have a token?", student['token']);
+// console.log("Does the teacher have a token?", student['token']);
